@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block page_content %}
+        <div class="mw6 center pa3 sans-serif">
+            <h1 class="mb4">Driver Details</h1>
+        {% for d in drivers %}
+            <div class="pa2 mb3 striped--near-white">
+                <div class="pl2">
+                    <p class="mb2"><a href="{{d.id}}">Driver Name: {{ d.name }}</a></p>
+                    <p class="mb2">License: {{ d.license }}</p>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+{% endblock %}
+ 
